@@ -1,15 +1,24 @@
+# Desktop Cat
+
 <p align="center">
-  <img src="assets/preview.png" width="600">
+  <img
+    src="assets/preview.gif"
+    width="176"
+    style="image-rendering: pixelated;"
+  >
 </p>
 
-Features
-- Pixel-art desktop cat
+A tiny pixel-art cat that lives on your Windows desktop.
+
+## Features
+
 - Walks on desktop windows
-- Grab, drag and throw interaction
+- Grab and throw the cat
 - Cursor interaction
-- Fall and landing animations
+- Landing and falling animations
 
-Requirements
-- Windows 10/11 64-bit
+## Preview
 
-This is an early alpha and tiny bugs are expected.
+<p align="center">
+  <img src="assets/gameplay.gif" width="500">
+</p>
