@@ -1,4 +1,6 @@
-![Desktop Cat](assets/preview.png)
+<p align="center">
+  <img src="assets/preview.png" width="600">
+</p>
 
 Features
 - Pixel-art desktop cat
