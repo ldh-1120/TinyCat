@@ -1,7 +1,9 @@
 <div align="center">
-<img src="assets/preview.gif" width="88"> <br>
+<img src="assets/preview.gif" width="88">
 
-<p> A tiny pixel-art cat that lives on your Windows desktop. </p>
+<br>
+
+<p> A tiny pixel-art cat that lives on your desktop </p>
 
 <h1> Features </h1>
 
@@ -9,7 +11,6 @@
     - Walks on desktop windows <br>
     - Grab and throw the cat <br>
     - Cursor interaction <br>
-    - Landing and falling animations
 </p>
 
 <br>
