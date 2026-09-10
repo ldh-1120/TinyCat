@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/preview.gif" width="88">
+<img src="assets/preview.gif" width="88"> <br>
 
 <p> A tiny pixel-art cat that lives on your Windows desktop. </p>
 
