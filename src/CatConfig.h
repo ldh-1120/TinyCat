@@ -3,6 +3,11 @@
 #include <windows.h>
 
 namespace CatConfig {
+	inline constexpr UINT WM_TRAYICON = WM_APP + 1;
+	inline constexpr UINT TrayIconId = 1;
+	inline constexpr UINT MenuExit = 1001;
+	inline constexpr UINT MenuAddCat = 1002;
+
 	inline constexpr UINT SpriteSize = 10;
 	inline constexpr UINT SpriteScale = 6;
 	inline constexpr UINT CatWidth = SpriteSize * SpriteScale;

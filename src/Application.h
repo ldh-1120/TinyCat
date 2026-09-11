@@ -1,11 +1,11 @@
 #pragma once
 
-#include "Cat.h"
-#include "CatSimulation.h"
 #include "CatSprites.h"
-#include "DesktopPlatforms.h"
-#include "PetRenderer.h"
+#include "CatWindow.h"
+#include "TrayIcon.h"
+#include <memory>
 #include <string>
+#include <vector>
 
 class Application {
 public:
@@ -19,16 +19,18 @@ public:
 private:
 	static LRESULT CALLBACK WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 	LRESULT HandleMessage(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
-	bool Render();
+	bool AddCat(std::wstring& error);
+	POINT SpawnPosition() const;
 
 	HINSTANCE instance;
 	HWND window = nullptr;
 	ATOM windowClass = 0;
+	ATOM catWindowClass = 0;
+	UINT taskbarCreatedMessage = 0;
 	HCURSOR grabCursor = nullptr;
 	HCURSOR grabbingCursor = nullptr;
-	Cat cat;
-	DesktopPlatforms platforms;
-	CatSimulation simulation;
+	bool shuttingDown = false;
 	CatSprites sprites;
-	PetRenderer renderer;
+	TrayIcon trayIcon;
+	std::vector<std::unique_ptr<CatWindow>> cats;
 };

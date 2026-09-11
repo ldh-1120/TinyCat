@@ -21,7 +21,7 @@ namespace {
 int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int) {
 	ComApartment apartment;
 	if (!apartment.IsInitialized()) {
-		MessageBoxW(nullptr, L"COM을 초기화하지 못했습니다.", L"Desktop Cat", MB_OK | MB_ICONERROR);
+		MessageBoxW(nullptr, L"Failed to initialize COM.", L"Tiny Cat", MB_OK | MB_ICONERROR);
 		return 1;
 	}
 
@@ -29,13 +29,13 @@ int WINAPI WinMain(HINSTANCE instance, HINSTANCE, LPSTR, int) {
 		Application application(instance);
 		std::wstring error;
 		if (!application.Initialize(error)) {
-			MessageBoxW(nullptr, error.c_str(), L"Desktop Cat", MB_OK | MB_ICONERROR);
+			MessageBoxW(nullptr, error.c_str(), L"Tiny Cat", MB_OK | MB_ICONERROR);
 			return 1;
 		}
 
 		return application.Run();
 	} catch (const std::exception&) {
-		MessageBoxW(nullptr, L"프로그램 실행 중 오류가 발생했습니다.", L"Desktop Cat", MB_OK | MB_ICONERROR);
+		MessageBoxW(nullptr, L"An unexpected error occurred while running Tiny Cat.", L"Tiny Cat", MB_OK | MB_ICONERROR);
 		return 1;
 	}
 }

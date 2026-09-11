@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -71,6 +71,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)build\bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)build\obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
       <PreprocessorDefinitions>_WINDOWS;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -79,6 +83,7 @@
       <ConformanceMode>true</ConformanceMode>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -87,6 +92,9 @@
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir)resources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -114,34 +122,51 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Cat.cpp" />
-    <ClCompile Include="CatSimulation.cpp" />
-    <ClCompile Include="CatSprites.cpp" />
-    <ClCompile Include="DesktopPlatforms.cpp" />
-    <ClCompile Include="Image.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="PetRenderer.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Cat.cpp" />
+    <ClCompile Include="src\CatSimulation.cpp" />
+    <ClCompile Include="src\CatSprites.cpp" />
+    <ClCompile Include="src\CatWindow.cpp" />
+    <ClCompile Include="src\DesktopPlatforms.cpp" />
+    <ClCompile Include="src\Image.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\PetRenderer.cpp" />
+    <ClCompile Include="src\TrayIcon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <RuntimeAsset Include="assets\cat_drag.png" />
-    <RuntimeAsset Include="assets\cat_fall.png" />
-    <RuntimeAsset Include="assets\cat_idle.png" />
-    <RuntimeAsset Include="assets\cat_land.png" />
-    <RuntimeAsset Include="assets\cat_walk.png" />
-    <RuntimeAsset Include="assets\grab.cur" />
-    <RuntimeAsset Include="assets\grabbing.cur" />
+    <RuntimeAsset Include="assets\sprites\cat_drag.png" />
+    <RuntimeAsset Include="assets\sprites\cat_fall.png" />
+    <RuntimeAsset Include="assets\sprites\cat_idle.png" />
+    <RuntimeAsset Include="assets\sprites\cat_land.png" />
+    <RuntimeAsset Include="assets\sprites\cat_walk.png" />
+    <RuntimeAsset Include="assets\cursors\grab.cur" />
+    <RuntimeAsset Include="assets\cursors\grabbing.cur" />
     <None Include="@(RuntimeAsset)" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Cat.h" />
-    <ClInclude Include="CatConfig.h" />
-    <ClInclude Include="CatSimulation.h" />
-    <ClInclude Include="CatSprites.h" />
-    <ClInclude Include="DesktopPlatforms.h" />
-    <ClInclude Include="Image.h" />
-    <ClInclude Include="PetRenderer.h" />
+    <ClInclude Include="src\Application.h" />
+    <ClInclude Include="src\Cat.h" />
+    <ClInclude Include="src\CatConfig.h" />
+    <ClInclude Include="src\CatSimulation.h" />
+    <ClInclude Include="src\CatSprites.h" />
+    <ClInclude Include="src\CatWindow.h" />
+    <ClInclude Include="src\DesktopPlatforms.h" />
+    <ClInclude Include="src\Image.h" />
+    <ClInclude Include="src\PetRenderer.h" />
+    <ClInclude Include="src\TrayIcon.h" />
+    <ClInclude Include="resources\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\icons\cat.ico" />
+    <Image Include="resources\icons\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\TinyCat.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="docs\images\preview.gif" />
+    <None Include="docs\images\gameplay.gif" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <Target Name="CopyRuntimeAssets" AfterTargets="Build">

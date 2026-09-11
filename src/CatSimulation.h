@@ -3,7 +3,7 @@
 #include "Cat.h"
 #include "DesktopPlatforms.h"
 
-// Advances behavior and physics. Window messages and rendering stay in Application.
+// Advances behavior and physics. Window messages and rendering stay in CatWindow.
 class CatSimulation {
 public:
 	CatSimulation(Cat& cat, DesktopPlatforms& platforms);

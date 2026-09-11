@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{7E945FB3-F6BD-41AA-8AA2-A5F866653DDF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{9BCF06C6-D6EB-4292-9023-E173C24D37D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources\icons">
+      <UniqueIdentifier>{4088F1F1-DB7C-45AF-B81C-F30E4B619836}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{0F45D85B-8257-44D4-B422-0E4A27495DFE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\sprites">
+      <UniqueIdentifier>{B70E40B6-C70F-4A0C-891C-5E908EEBF460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="assets\cursors">
+      <UniqueIdentifier>{387A2474-17A3-498A-9308-3DC9CF34569A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs">
+      <UniqueIdentifier>{E578F5D9-3685-4D3A-B6C0-F4B7D93954B6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs\images">
+      <UniqueIdentifier>{B619C46D-C54D-4EC9-8C61-738050EFA3A6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Cat.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CatSimulation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CatSprites.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CatWindow.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DesktopPlatforms.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Image.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PetRenderer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TrayIcon.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <None Include="assets\sprites\cat_drag.png">
+      <Filter>assets\sprites</Filter>
+    </None>
+    <None Include="assets\sprites\cat_fall.png">
+      <Filter>assets\sprites</Filter>
+    </None>
+    <None Include="assets\sprites\cat_idle.png">
+      <Filter>assets\sprites</Filter>
+    </None>
+    <None Include="assets\sprites\cat_land.png">
+      <Filter>assets\sprites</Filter>
+    </None>
+    <None Include="assets\sprites\cat_walk.png">
+      <Filter>assets\sprites</Filter>
+    </None>
+    <None Include="assets\cursors\grab.cur">
+      <Filter>assets\cursors</Filter>
+    </None>
+    <None Include="assets\cursors\grabbing.cur">
+      <Filter>assets\cursors</Filter>
+    </None>
+    <ClInclude Include="src\Application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Cat.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CatConfig.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CatSimulation.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CatSprites.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\CatWindow.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DesktopPlatforms.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Image.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PetRenderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TrayIcon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="resources\resource.h">
+      <Filter>resources</Filter>
+    </ClInclude>
+    <Image Include="resources\icons\cat.ico">
+      <Filter>resources\icons</Filter>
+    </Image>
+    <Image Include="resources\icons\icon1.ico">
+      <Filter>resources\icons</Filter>
+    </Image>
+    <ResourceCompile Include="resources\TinyCat.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+    <None Include="README.md">
+      <Filter>docs</Filter>
+    </None>
+    <None Include="docs\images\preview.gif">
+      <Filter>docs\images</Filter>
+    </None>
+    <None Include="docs\images\gameplay.gif">
+      <Filter>docs\images</Filter>
+    </None>
+  </ItemGroup>
+</Project>
