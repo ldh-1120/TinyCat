@@ -109,6 +109,12 @@ LRESULT CALLBACK CatWindow::WindowProc(HWND hwnd, UINT message, WPARAM wParam, L
 
 LRESULT CatWindow::HandleMessage(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam) {
 	switch (message) {
+		case WM_DPICHANGED:
+			// Rendering, hit testing and physics share fixed physical-pixel geometry.
+			// Keep the simulation position and bitmap size instead of the suggested
+			// DPI-scaled rectangle; Render() submits both on the next frame.
+			return 0;
+
 		case WM_LBUTTONDOWN: {
 			POINT cursor { };
 			if (GetCursorPos(&cursor)) {

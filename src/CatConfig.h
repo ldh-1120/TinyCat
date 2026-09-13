@@ -8,6 +8,8 @@ namespace CatConfig {
 	inline constexpr UINT MenuExit = 1001;
 	inline constexpr UINT MenuAddCat = 1002;
 
+	// Geometry and motion use physical screen pixels, matching the DPI manifest
+	// and DWM platform bounds. Sprite pixels keep the same size on every monitor.
 	inline constexpr UINT SpriteSize = 10;
 	inline constexpr UINT SpriteScale = 6;
 	inline constexpr UINT CatWidth = SpriteSize * SpriteScale;

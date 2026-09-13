@@ -90,6 +90,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Manifest>
+      <!-- DPI awareness is declared in resources\TinyCat.manifest. -->
+      <EnableDpiAwareness>false</EnableDpiAwareness>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
     <ResourceCompile>
@@ -162,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\TinyCat.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="resources\TinyCat.manifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

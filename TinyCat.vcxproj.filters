@@ -120,6 +120,9 @@
     <ResourceCompile Include="resources\TinyCat.rc">
       <Filter>resources</Filter>
     </ResourceCompile>
+    <Manifest Include="resources\TinyCat.manifest">
+      <Filter>resources</Filter>
+    </Manifest>
     <None Include="README.md">
       <Filter>docs</Filter>
     </None>
